@@ -4,25 +4,26 @@ import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
 
-const LOCAL_STORAGE_LIST_KEY = 'tasks.list';
+const LOCAL_STORAGE_LIST_KEY = 'tasks.lists';
 
 function App() {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []);
   const [showStatus, setStatus] = useState({ completed: false, incompleted: false, all: true })
 
-  function save() {
-    localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(items));
+  function save(updateItems) {
+    localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(updateItems));
   }
 
   function addNewItem(itemTitle) {
-    setItems([...items, { title: itemTitle, completed: false, id: (new Date()).getTime() }]);
-    save();
+    const updateItems = [...items, { title: itemTitle, completed: false, id: (new Date()).getTime() }];
+    save(updateItems);
+    setItems(updateItems);
   }
 
   function removeItem(item) {
     const updateItems = items.filter(currentItem => item.title !== currentItem.title);
+    save(updateItems);
     setItems(updateItems);
-    save();
   }
 
   function toggleCompleteItem(item) {
@@ -31,14 +32,14 @@ function App() {
         currentItem.completed = !currentItem.completed;
       return currentItem;
     });
+    save(updateItems);
     setItems(updateItems);
-    save();
   }
 
   function clearCompleted() {
     const updateItems = items.filter(currentItem => !currentItem.completed);
+    save(updateItems);
     setItems(updateItems);
-    save();
   }
 
   function showCompleted() {
