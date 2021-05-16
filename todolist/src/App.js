@@ -4,7 +4,7 @@ import Footer from './Footer';
 import Header from './Header';
 import Main from './Main';
 
-const LOCAL_STORAGE_LIST_KEY = 'tasks.lists';
+const LOCAL_STORAGE_LIST_KEY = 'tasks.list';
 
 function App() {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || []);
