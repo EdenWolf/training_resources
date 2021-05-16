@@ -7,7 +7,7 @@ function Main(props) {
     function renderCompleted() {
         return (
             <ul className="todo-list">
-                {items.map(item => (
+                {items.filter(item => item.completed).map(item => (
                     <li className={item.completed ? "completed" : null}>
                         <div className="view">
                             <input className="toggle"
@@ -17,7 +17,7 @@ function Main(props) {
                         </div>
                         <input className="edit" />
                     </li>
-                )).filter(item => item.completed)}
+                ))}
             </ul>
         )
     }
@@ -25,7 +25,7 @@ function Main(props) {
     function renderIncompleted() {
         return (
             <ul className="todo-list">
-                {items.map(item => ( // TODO: FIX!!! 
+                {items.filter(item => !item.completed).map(item => ( // TODO: FIX!!! 
                     <li className={item.completed ? "completed" : null}>
                         <div className="view">
                             <input className="toggle"
