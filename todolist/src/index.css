@@ -344,6 +344,45 @@ html .clear-completed:active {
 	text-decoration: underline;
 }
 
+.show-buttons {
+	color: #777;
+	margin: 0;
+	height: 20px;
+	padding: 10px 15px;
+	list-style: none;
+	position: relative;
+	right: 0;
+	left: 0;
+	line-height: 20px;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.footer {
+	text-align: center;
+}
+
+.show-buttons li {
+	display: inline;
+}
+
+.show-buttons li button {
+	color: inherit;
+	margin: 0px;
+	padding: 0px 5px;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: 3px;
+}
+
+.show-buttons li button,
+html .show-buttons li button:active {
+	cursor: pointer;
+}
+
+.show-buttons li button:hover {
+	text-decoration: underline;
+}
+
 /*
 	Hack to remove background from Mobile Safari.
 	Can't use it globally since it destroys checkboxes in Firefox
