@@ -1,38 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import Main from './Main';
 
 function App() {
+  const [items, setItems] = useState([]);
+
+  function addNewItem(itemTitle) {
+    setItems([...items, { title: itemTitle, completed: false }]);
+  }
+
+  function removeItem(item) {
+    const updateItems = items.filter(currentItem => item.title !== currentItem.title);
+    setItems(updateItems);
+  }
+
+  function toggleCompleteItem(item) {
+    const updateItems = items.map(currentItem => {
+      if (currentItem.title === item.title)
+        currentItem.completed = !currentItem.completed;
+      return currentItem;
+    });
+    setItems(updateItems);
+  }
+
+  function clearCompleted() {
+    const updateItems = items.filter(currentItem => !currentItem.completed);
+    setItems(updateItems);
+  }
+
   return (
     <section className="todoapp">
-      <header className="header">
-        <h1>todos</h1>
-        <input className="new-todo"
-          placeholder="What needs to be done?"
-          autofocus />
-      </header>
-
-      <section className="main">
-        <input className="toggle-all"
-          type="checkbox" />
-        <ul className="todo-list">
-          <li>
-            <div className="view">
-              <input className="toggle"
-                type="checkbox" />
-              <label>Todo Title</label>
-              <button className="destroy"></button>
-            </div>
-            <input className="edit" />
-          </li>
-        </ul>
-      </section>
-
-      <footer className="footer">
-        <span className="todo-count"><strong>0</strong> items left</span>
-        <button className="clear-completed">Clear completed
-        </button>
-      </footer>
-
+      <Header title="ToDo" addItem={addNewItem} />
+      <Main items={items} removeItem={removeItem} toggleCompleteItem={toggleCompleteItem} />
+      <Footer items={items} clearCompleted={clearCompleted} />
     </section>
   );
 }
