@@ -31,7 +31,7 @@ function Header(props) {
             </ul>
             <input className="new-todo"
                 placeholder="What needs to be done?"
-                autofocus onKeyDown={handleEnter} />
+                autoFocus onKeyDown={handleEnter} />
         </header>
     )
 }

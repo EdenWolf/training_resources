@@ -9,7 +9,7 @@ function App() {
   const [showStatus, setStatus] = useState({ completed: false, incompleted: false, all: true })
 
   function addNewItem(itemTitle) {
-    setItems([...items, { title: itemTitle, completed: false }]);
+    setItems([...items, { title: itemTitle, completed: false, id: (new Date()).getTime() }]);
   }
 
   function removeItem(item) {
@@ -19,7 +19,7 @@ function App() {
 
   function toggleCompleteItem(item) {
     const updateItems = items.map(currentItem => {
-      if (currentItem.title === item.title)
+      if (currentItem.id === item.id)
         currentItem.completed = !currentItem.completed;
       return currentItem;
     });

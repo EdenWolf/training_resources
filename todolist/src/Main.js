@@ -8,7 +8,7 @@ function Main(props) {
         return (
             <ul className="todo-list">
                 {items.filter(item => item.completed).map(item => (
-                    <li className={item.completed ? "completed" : null}>
+                    <li className={item.completed ? "completed" : null} key={item.id}>
                         <div className="view">
                             <input className="toggle"
                                 type="checkbox" />
@@ -26,7 +26,7 @@ function Main(props) {
         return (
             <ul className="todo-list">
                 {items.filter(item => !item.completed).map(item => ( // TODO: FIX!!! 
-                    <li className={item.completed ? "completed" : null}>
+                    <li className={item.completed ? "completed" : null} key={item.id}>
                         <div className="view">
                             <input className="toggle"
                                 type="checkbox" />
@@ -44,7 +44,7 @@ function Main(props) {
         return (
             <ul className="todo-list">
                 {items.map(item => (
-                    <li className={item.completed ? "completed" : null}>
+                    <li className={item.completed ? "completed" : null} key={item.id}>
                         <div className="view">
                             <input className="toggle"
                                 type="checkbox" />
