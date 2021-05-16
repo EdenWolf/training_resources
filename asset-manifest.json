@@ -1,23 +1,22 @@
 {
   "files": {
-    "main.css": "/training_resources/static/css/main.80528145.chunk.css",
-    "main.js": "/training_resources/static/js/main.bd7c8ace.chunk.js",
-    "main.js.map": "/training_resources/static/js/main.bd7c8ace.chunk.js.map",
-    "runtime-main.js": "/training_resources/static/js/runtime-main.2c824fb7.js",
-    "runtime-main.js.map": "/training_resources/static/js/runtime-main.2c824fb7.js.map",
-    "static/js/2.0c4c8859.chunk.js": "/training_resources/static/js/2.0c4c8859.chunk.js",
-    "static/js/2.0c4c8859.chunk.js.map": "/training_resources/static/js/2.0c4c8859.chunk.js.map",
-    "static/js/3.e62ddfd6.chunk.js": "/training_resources/static/js/3.e62ddfd6.chunk.js",
-    "static/js/3.e62ddfd6.chunk.js.map": "/training_resources/static/js/3.e62ddfd6.chunk.js.map",
+    "main.css": "/training_resources/static/css/main.09d5914d.chunk.css",
+    "main.js": "/training_resources/static/js/main.84a3bba2.chunk.js",
+    "main.js.map": "/training_resources/static/js/main.84a3bba2.chunk.js.map",
+    "runtime-main.js": "/training_resources/static/js/runtime-main.b4a913de.js",
+    "runtime-main.js.map": "/training_resources/static/js/runtime-main.b4a913de.js.map",
+    "static/js/2.b2d04260.chunk.js": "/training_resources/static/js/2.b2d04260.chunk.js",
+    "static/js/2.b2d04260.chunk.js.map": "/training_resources/static/js/2.b2d04260.chunk.js.map",
+    "static/js/3.f11e4b40.chunk.js": "/training_resources/static/js/3.f11e4b40.chunk.js",
+    "static/js/3.f11e4b40.chunk.js.map": "/training_resources/static/js/3.f11e4b40.chunk.js.map",
     "index.html": "/training_resources/index.html",
-    "static/css/main.80528145.chunk.css.map": "/training_resources/static/css/main.80528145.chunk.css.map",
-    "static/js/2.0c4c8859.chunk.js.LICENSE.txt": "/training_resources/static/js/2.0c4c8859.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/training_resources/static/media/logo.6ce24c58.svg"
+    "static/css/main.09d5914d.chunk.css.map": "/training_resources/static/css/main.09d5914d.chunk.css.map",
+    "static/js/2.b2d04260.chunk.js.LICENSE.txt": "/training_resources/static/js/2.b2d04260.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.2c824fb7.js",
-    "static/js/2.0c4c8859.chunk.js",
-    "static/css/main.80528145.chunk.css",
-    "static/js/main.bd7c8ace.chunk.js"
+    "static/js/runtime-main.b4a913de.js",
+    "static/js/2.b2d04260.chunk.js",
+    "static/css/main.09d5914d.chunk.css",
+    "static/js/main.84a3bba2.chunk.js"
   ]
 }
