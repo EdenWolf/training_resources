@@ -21,7 +21,7 @@ function App() {
   }
 
   function removeItem(item) {
-    const updateItems = items.filter(currentItem => item.title !== currentItem.title);
+    const updateItems = items.filter(currentItem => item.id !== currentItem.id);
     save(updateItems);
     setItems(updateItems);
   }
